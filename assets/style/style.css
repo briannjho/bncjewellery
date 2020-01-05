@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #fff; I put this one as comment first cause my div wasnt working.*/
+    font-family: "Brandon Grotesque Thin";
+  }
+  
+
+  /* NAVBAR */
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 0.5px solid #807c7c;
+    z-index: 0;
+  }
+  
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 450px; /* Footer height */
+  }
+  
+  /*nav-link*/
+  
+  .nav-link,
+  .dropdown-nav-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .nav-link {
+    display: inline-block;
+  }
+  .nav-link::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transition: width 0.3;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  
+ /* li,
+  a,
+  i {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+  }  */
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    padding: 24px 21px 33px 21px;
+  }
+  
+  /*dropdown-nav-link-animation*/
+  .dropdown-nav-link {
+    display: inline-block;
+  }
+  .dropdown-nav-link::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transition: width 0.3;
+  }
+  
+  .dropdown-nav-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  
+ /* nav ul li a {
+    position: relative;
+    transition: 0.3s linear;
+  }
+  
+  nav ul li a:hover {
+    color: #807c7c;
+  }  */
+
+  .navbarright li:nth-child(3) {
+    padding: 24px 30px 33px 0px;
+  }
+  
+  .logo {
+    color: #000;
+    position: relative;
+    left: -86px;
+    text-align: start;
+    font-size: 30px;
+    font-family: "Brandon Grotesque Regular";
+    cursor: pointer;
+  }
+
+  .signInButton {
+      color: black;
+      text-decoration: none;
+  }
+  
+  .menu-dropdown-1 {
+    top: 77.5px;
+    left: 0;
+    padding-top: 39px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid #807c7c;
+    text-transform: capitalize;
+  }
+  
+  .navbarleft li:hover .menu-dropdown-1 {
+    display: block;
+  }
+  
+  .menu-dropdown-1 h3 {
+    padding-left: 21px;
+    font-family: "Brandon Grotesque Regular";
+    font-size: 15px;
+  }
+  
+  .menu-dropdown-1 li {
+    display: block;
+    font-size: 15px;
+    padding: 10px 90px 0px 21px;
+  }
+  
+  .menu-dropdown-2 {
+    top: 77.5px;
+    left: 0;
+    padding-top: 39px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid #807c7c;
+    text-transform: capitalize;
+  }
+  
+  .menu-dropdown-position-2 {
+    position: relative;
+    left: 85px;
+  }
+  
+  .menu-dropdown-2 li {
+    display: block;
+    font-size: 15px;
+    padding: 10px 90px 0px 21px;
+  }
+  
+  .navbarleft li:hover .menu-dropdown-2 {
+    display: block;
+  }
+  
+  .menu-dropdown-2 h3 {
+    padding-left: 21px;
+    font-family: "Brandon Grotesque Regular";
+    font-size: 15px;
+  }
+  
+  .menu-dropdown-3 {
+    top: 77.5px;
+    left: 0;
+    padding-top: 39px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid #807c7c;
+    text-transform: capitalize;
+  }
+  
+  .menu-dropdown-position-3 {
+    position: relative;
+    left: 204px;
+  }
+  
+  .menu-dropdown-3 li {
+    display: block;
+    font-size: 15px;
+    padding: 10px 90px 0px 21px;
+  }
+  
+  .navbarleft li:hover .menu-dropdown-3 {
+    display: block;
+  }
+  
+  .menu-dropdown-3 h3 {
+    padding-left: 21px;
+    font-family: "Brandon Grotesque Regular";
+    font-size: 15px;
+  }
+  
+  .menu-dropdown-4 {
+    top: 77.5px;
+    left: 0;
+    padding-top: 39px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid #807c7c;
+    text-transform: capitalize;
+  }
+  
+  .menu-dropdown-position-4 {
+    position: relative;
+    left: 315px;
+  }
+  
+  .menu-dropdown-4 li {
+    display: block;
+    font-size: 15px;
+    padding: 10px 90px 0px 21px;
+  }
+  
+  .navbarleft li:hover .menu-dropdown-4 {
+    display: block;
+  }
+  
+  .menu-dropdown-4 h3 {
+    padding-left: 21px;
+    font-family: "Brandon Grotesque Regular";
+    font-size: 15px;
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .menu-column-1 li:nth-last-child(1),
+  .menu-column-2 li:nth-last-child(1),
+  .menu-column-3 li:nth-last-child(1),
+  .menu-column-4 li:nth-last-child(1) .menu-column-5 li:nth-last-child(1) {
+    margin-bottom: 42px;
+  }
+
+  /******************/
+  
+
+  /* FOOTER */
+  
+  /*footer-top*/
+  footer .section-top {
+    display: flex;
+  }
+  
+  footer {
+    position: fixed;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 425px;
+    z-index: 0;
+  }
+  
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4 {
+    margin: 70px auto 0px;
+  }
+  
+  .footer-links,
+  .section-4 p {
+    margin-top: 25px;
+    font-size: 13.5px;
+  }
+  
+  .section-top .footer-links li {
+    margin-top: 14px;
+  }
+  
+  .section-top form {
+    margin-top: 30px;
+    height: 35px;
+  }
+  
+  /*footer-bottom*/
+  footer .section-bottom ul {
+    display: flex;
+    height: 50px;
+    background: #fafafa;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    justify-content: center;
+  }
+  
+  footer .section-bottom ul li {
+    margin: auto 30px auto 30px;
+  }
+  
+  .input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .fa.fa-angle-right {
+    font-size: 24px;
+    padding: 10px;
+    /* background: dodgerblue; */
+    background: black;
+    color: white;
+    text-align: center;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  
+  /*footer-links*/
+  .footer-links {
+    list-style-type: none;
+  }
+  
+  .footer-link,
+  footer p {
+    list-style-type: none;
+    color: grey;
+    text-decoration: none;
+  }
+  .footer-link {
+    display: inline-block;
+  }
+  
+  .footer-link::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transition: width 0.3;
+  }
+  
+  .footer-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+  
+    /******************/
+
+
+  /* SIGN IN AND REGISTRATION CSS */
+  
+  .signInModalBackground {
+      display: flex;
+      background-color: rgba(74, 74, 74, 0.95);
+      height: 100vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.8s linear;
+      z-index: 1;
+  }
+  
+  .signInModalActive{
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) !important;
+  
+  }
+  
+  .signInContainer {
+      background-color: rgba(250, 247, 240, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: .5rem;
+      box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+      transform: translateY(-5%);
+      transition: all 0.8s;
+  }
+  
+  .formContainer{
+      display: flex;
+      flex-direction: column;
+      padding : 4rem 6.5rem;
+  }
+  
+  .goodToSeeYou {
+      font-size: 24px;
+      font-family: 'Brandon Grotesque Regular';
+      text-align: center;
+      margin-bottom: 0.2rem;
+  }
+  
+  .plsLogin {
+      font-size: 18px;
+      text-align: center;
+      font-family: 'Brandon Grotesque Thin';
+      margin-bottom: 0.8rem;
+      
+  }
+  
+  .formContainer form {
+      display: flex;
+      flex-direction: column;
+      border-style: none;
+  }
+  
+  .formContainer form input {
+      border: none;
+      border: 1px solid #ced0da;
+      padding: .73125rem 13rem .73125rem .70rem;
+      margin: 0.4rem;
+      font-size: 1rem;
+      
+  }    
+  
+  .formContainer form input::placeholder {
+      color: #545454 !important;
+      font-family: 'Brandon Grotesque Regular';
+  }    
+  
+  .formContainer form input[type = "submit"] {
+      background-color: #000;
+      border-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: .73125rem 0;
+  
+  }    
+  
+  .formContainer a {
+      text-align: center;
+      font-size: .875rem;
+      margin-top: 0.7rem;
+  }
+  
+  .formContainer a span{
+      color: #609ae9;
+  
+  }
+  
+  .signInModalClose {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 1.7rem;
+      right: 1.7rem;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+  
+  }
+  
+  .line {
+      width: 100%;
+      height: 1px;
+      background-color: black;
+  }
+  .line-1{
+      transform: rotateZ(-45deg) translateY(1px) translateX(0.5px);
+  }
+  
+  .line-2{
+      transform: rotateZ(45deg);
+  }
+
+    /******************/
+  
+    /* SIGN IN AND REGISTRATION CSS */
+  
+    /* .signInBackground {
+        display: flex;
+        background-color: #efefef;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .signInContainer {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+      }
+      
+      .formContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 6.5rem;
+      }
+      
+      .signInLogo {
+        font-size: 30px;
+        font-family: "Brandon Grotesque Regular";
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .formContainer form {
+        display: flex;
+        flex-direction: column;
+        border-style: none;
+      }
+      
+      .formContainer form input {
+        border: none;
+        border: 1px solid #ced0da;
+        padding: 0.73125rem 13rem 0.73125rem 0.7rem;
+        margin: 0.4rem;
+        font-size: 1rem;
+      }
+      
+      .formContainer form input::placeholder {
+        color: #545454 !important;
+        font-family: "Brandon Grotesque Regular";
+      }
+      
+      .formContainer form input[type="submit"] {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 0.73125rem 0;
+      }
+      
+      .formContainer a {
+        text-align: center;
+        font-size: 0.875rem;
+        color: #313338;
+        margin-top: 0.7rem;
+      }
+      
+      .formContainer a span {
+        color: #609ae9;
+      }
+   */
+  /******************************/
+  
+  
+  /*MEDIA QUERY FOR RESPONSIVE WEBSITE*/
