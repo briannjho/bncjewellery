@@ -13,7 +13,7 @@
     ></script>
 
     <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/fonts/fonts.css" />
+    <link rel="stylesheet" href="assets/style/fonts/font.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -260,7 +260,7 @@
                 </li>
             </ul>
     </nav>
-    
+
 </header>
 
 <div class="signInModalBackground">
